@@ -5,17 +5,6 @@ Created on Wed Jun 17 22:27:13 2020
 
 @author: Eric
 
-To get Instagram data from the given profiles: 
-    - 365 x
-    - Iacho x
-    - Santo Placardx
-    - Nico Tatuero / Tatuero Estudio x
-    - Lucky Lion x
-    
-Todo: 
-    - Create functions; one for info and then for posts 
-    - return lists and dicts
-    - append posts dict to info dict. 
 """
 #importing necesary libraries
 
@@ -96,29 +85,6 @@ def get_profile_info():
     
     return user_info,post_data_list,
 
-
-#
-#def clean_post_data():
-#    i = 0
-#    for data in post_data_list:
-#        target = data[i]['node']
-#        pic_url = target['display_url']
-#        capt = target['edge_media_to_caption']['edges'][0]['node']['text']
-#        comments = target['edge_media_to_comment']['count']
-#        likes = target['edge_liked_by']['count']
-#        
-#        posts_dict = {
-#                    'Post Number':i+1,
-#                    'Caption':capt,
-#                    'Number of Comments':comments,
-#                    'Number of Like':likes,
-#                    'Post URL':pic_url
-#                    }
-#        posts_list.append(posts_dict)
-#        i += 1
-#        
-#    return posts_list
-
 def clean_post_data():
     
     for json_item in post_data_list: 
@@ -175,12 +141,3 @@ def run_all():
 
 
 run_all()
-
-
-#downloading the profile picture 
-#save_img = Image.open(requests.get(profile_pic,stream = True).raw).save('profilepic.jpg')
-#
-
-
-#df = pd.DataFrame(posts_list)
-#df.to_csv('test_iacho.csv',encoding='utf-8-sig')
