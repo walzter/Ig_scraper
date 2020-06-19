@@ -43,7 +43,7 @@ post_data_list = []
 #cleaned posts data list 
 posts_list = []
 #base_path
-base_path = '/Users/Eric/Documents/Python/Projects/IG_scraper/Profiles/' 
+base_path = 'YOUR PATH HERE' 
 
 
 def get_profile_info():
